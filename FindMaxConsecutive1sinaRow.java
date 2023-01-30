@@ -3,6 +3,7 @@ public class FindMaxConsecutive1sinaRow {
     // hint initialize and declare a variable here 
     // to keep track of how many 1's you have seen in a row
     static int counter=0;
+    static int result=0;
     public static int findConsecutiveOnes(int[] nums) {
         
         
@@ -12,14 +13,18 @@ public class FindMaxConsecutive1sinaRow {
            }else{
             counter+=1;
            }
+           if(result<counter){
+            result=counter;
+           }
           
         }
        
-        return counter;
+        return result;
     }
 
     public static void main(String[] args) {
-        int[] array = {1,1,0,1,1,1};
+        // int[] array = {1,1,0,1,1,1};
+        int[] array ={1,0,1,1,0,1};
         int print =FindMaxConsecutive1sinaRow.findConsecutiveOnes(array);
         System.out.println(print);
     }
