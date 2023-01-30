@@ -12,7 +12,7 @@ public class DVD{
     }
 
     public String toString(){
-        return this.name+", directed by"+ this.director+", released in"+
+        return this.name+", directed by "+ this.director+", released in "+
         this.releaseYear;
     }
 
