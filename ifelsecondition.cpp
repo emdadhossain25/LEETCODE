@@ -12,13 +12,22 @@ int main()
     cin >> savings;
     if (savings > 5000)
     {
-        cout << "Neha" << endl;
+        if (savings>10000)
+        {
+            cout<<"Roadtrip with neha"<<"\n";   
+        }else
+        {
+            cout<<"Shopping with neha"<<"\n";
+        }
+        
     }
     else if (savings > 2000)
     {
         cout << "Rashmi" << endl;
-    }else{
-        cout<<"Friends"<<endl;
+    }
+    else
+    {
+        cout << "Friends" << endl;
     }
     return 0;
 }
