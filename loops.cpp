@@ -11,6 +11,19 @@ void forLoop(int counter)
     }
     cout << sum;
 }
+
+
+void whileLoop(int counter){
+    while (counter>=0)
+    {
+        cout<<counter<<endl;
+        cin>>counter;
+        
+    }
+    cout<<"exit"<<endl;
+    
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -19,6 +32,7 @@ int main()
 #endif
     int n;
     cin >> n;
-    forLoop(n);
+    // forLoop(n);
+    whileLoop(n);
     return 0;
 }
