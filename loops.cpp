@@ -24,6 +24,15 @@ void whileLoop(int counter){
     
 }
 
+void doWhileLoop(int counter){
+    do
+    {
+        cout<<counter<<endl;
+        cin>>counter;
+    } while (counter>=0);
+    
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -33,6 +42,7 @@ int main()
     int n;
     cin >> n;
     // forLoop(n);
-    whileLoop(n);
+    // whileLoop(n);
+    doWhileLoop(n);
     return 0;
 }
