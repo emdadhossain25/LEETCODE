@@ -1,2 +1,1 @@
-Input a character: 
-hello e
+2
