@@ -12,7 +12,7 @@ int main()
     int amount2;
     cin >> amount1;
     cin >> amount2;
-    int sum = amount1 + amount2;
-    cout << sum << endl;
+    
+    cout << amount1+amount2 << endl;
     return 0;
 }
