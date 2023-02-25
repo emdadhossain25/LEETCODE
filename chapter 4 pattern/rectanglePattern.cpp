@@ -131,6 +131,28 @@ void halfPyrUsinNumber()
     }
 }
 
+void froidsTriangle()
+{
+
+    // 1
+    // 2 3
+    // 4 5 6
+    // 7 8 9 10
+    // 11 12 13 14 15
+    int n;
+    cin >> n;
+    int count = 0;
+    ;
+    for (int i = 1; i <= n; i++)
+    { // row
+        for (int j = 1; j <= i; j++)
+        { // col
+            count += 1;
+            cout << " " << count;
+        }
+        cout << endl;
+    }
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -141,6 +163,7 @@ int main()
     // hollowRectanglePattern();
     // invertedHalfPyramid();
     // halfPyr180rotation();
-    halfPyrUsinNumber();
+    // halfPyrUsinNumber();
+    froidsTriangle();
     return 0;
 }
