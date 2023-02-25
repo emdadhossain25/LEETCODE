@@ -26,6 +26,14 @@ void postPreIncrementDecrement(){
      cout<<m<<endl;
 }
 
+void postPreIncrementDecrement2(){
+    int i=10,j=20,k;
+        //10  //9  //19  //20  //9  //20  //10   //19
+    k = i-- - i++ + --j - ++j + --i - j-- + ++i - j++;
+    cout<<i<<endl;//10
+    cout<<j<<endl;//20
+    cout<<k<<endl; // -20
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -34,6 +42,7 @@ int main()
 #endif
     // prePostIncrement();
     // prePostIncrementDecrement();
-    postPreIncrementDecrement();
+    // postPreIncrementDecrement();
+    postPreIncrementDecrement2();
     return 0;
 }
