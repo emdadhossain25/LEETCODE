@@ -11,12 +11,21 @@ void prePostIncrement(){
     cout << k << endl;
 }
 
+void prePostIncrementDecrement(){
+    int i = 0;
+       //0    //0   //1   //1
+    i = i++ - --i + ++i - i--;
+  //0
+  cout<<i<<endl;
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    prePostIncrement();
+    // prePostIncrement();
+    prePostIncrementDecrement();
     return 0;
 }
