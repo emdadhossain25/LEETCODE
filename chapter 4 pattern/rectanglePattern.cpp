@@ -81,6 +81,34 @@ void invertedHalfPyramid()
         cout << endl;
     }
 }
+
+void halfPyr180rotation()
+{
+
+    //    * 1
+    //   ** 2
+    //  *** 3
+    // **** 4
+    //***** 5
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    { // row
+        for (int j = 1; j <= n; j++)
+        { // col
+            if (j <= n - i)
+            {
+                cout << " ";
+            }
+            else
+            {
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -89,6 +117,7 @@ int main()
 #endif
     // simpleRectanglePattern();
     // hollowRectanglePattern();
-    invertedHalfPyramid();
+    // invertedHalfPyramid();
+    halfPyr180rotation();
     return 0;
 }
