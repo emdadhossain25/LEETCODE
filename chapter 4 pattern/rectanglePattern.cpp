@@ -40,16 +40,44 @@ void hollowRectanglePattern()
         for (int j = 1; j <= column; j++)
         {
 
-            if (j == 1 || i == 1 || j == column || i == row)
+            if (i == 1 || i == row)
             {
                 cout << "*";
             }
+            else if (j == 1 || j == column)
+            {
+                cout << "*";
+            }
+
             else
             {
                 cout << " ";
             }
         }
 
+        cout << endl;
+    }
+}
+
+void invertedHalfPyramid()
+{
+
+    // ****
+    // ***
+    // **
+    // *
+    // n =4
+    int n;
+
+    cin >> n;
+    // i is row
+    for (int i = 0; i < n; i++)
+    {
+        // j is column
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
         cout << endl;
     }
 }
@@ -60,6 +88,7 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
     // simpleRectanglePattern();
-    hollowRectanglePattern();
+    // hollowRectanglePattern();
+    invertedHalfPyramid();
     return 0;
 }
