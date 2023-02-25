@@ -62,19 +62,19 @@ void hollowRectanglePattern()
 void invertedHalfPyramid()
 {
 
-    // ****
-    // ***
-    // **
-    // *
+    // **** 4
+    // *** 3
+    // ** 2
+    // * 1
     // n =4
     int n;
 
     cin >> n;
-    // i is row
-    for (int i = 0; i < n; i++)
+
+    // i is the row
+    for (int i = n; i >= 1; i--)
     {
-        // j is column
-        for (int j = 0; j < n - i; j++)
+        for (int j = 1; j <= i; j++)
         {
             cout << "*";
         }
