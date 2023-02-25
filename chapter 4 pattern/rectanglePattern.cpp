@@ -99,16 +99,18 @@ void halfPyr180rotation()
         { // col
             if (j <= n - i)
             {
-                cout << " ";
+                cout << "  ";
             }
             else
             {
-                cout << "*";
+                cout << "* ";
             }
         }
         cout << endl;
     }
 }
+
+
 int main()
 {
 #ifndef ONLINE_JUDGE
