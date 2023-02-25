@@ -153,6 +153,65 @@ void froidsTriangle()
         cout << endl;
     }
 }
+void butterflyPatter()
+{
+
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    int n;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    { // row
+
+        for (int j = 1; j <= 2 * n; j++)
+        {
+            if (j <= i)
+            {
+                cout << "* ";
+            }
+            else if (j <= 2 * n - i)
+            {
+                cout << "  ";
+            }
+            else
+            {
+                cout << "* ";
+            }
+        }
+
+        cout << endl;
+    }
+
+    for (int i = n; i >= 1; i--)
+    { // row
+
+        for (int j = 1; j <= 2 * n; j++)
+        {
+            if (j <= i)
+            {
+                cout << "* ";
+            }
+            else if (j <= 2 * n - i)
+            {
+                cout << "  ";
+            }
+            else
+            {
+                cout << "* ";
+            }
+        }
+
+        cout << endl;
+    }
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -164,6 +223,7 @@ int main()
     // invertedHalfPyramid();
     // halfPyr180rotation();
     // halfPyrUsinNumber();
-    froidsTriangle();
+    // froidsTriangle();
+    butterflyPatter();
     return 0;
 }
