@@ -18,6 +18,13 @@ void prePostIncrementDecrement(){
   //0
   cout<<i<<endl;
 }
+void postPreIncrementDecrement(){
+    int i=1,j=2,k=3;
+          //1    //2   //3
+    int m= i-- - j-- - k--;
+     // -4
+     cout<<m<<endl;
+}
 
 int main()
 {
@@ -26,6 +33,7 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
     // prePostIncrement();
-    prePostIncrementDecrement();
+    // prePostIncrementDecrement();
+    postPreIncrementDecrement();
     return 0;
 }
