@@ -212,28 +212,68 @@ void butterflyPatter()
         cout << endl;
     }
 }
-
-void invertedPattern(){
+void invertedPattern()
+{
     // 1 2 3 4 5
     // 1 2 3 4
     // 1 2 3
-    // 1 2 
+    // 1 2
     // 1
-   int n;
-   cin>>n;
-  
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = 1; j<=n-i; j++)
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
     {
-        cout<<j<<" ";
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
     }
-    cout<<endl;
-    
-  }
-  
-   
 }
+
+void _01Pattern()
+{
+    // 1
+    // 0 1
+    // 1 0 1
+    // 0 1 0 1
+    // 1 0 1 0 1
+    int n;
+    cin >> n;
+
+    // checking for even column and rows
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % 2 == 0)
+            {
+                if (j % 2 == 0)
+                {
+                    cout << "1 ";
+                }
+                else
+                {
+                    cout << "0 ";
+                }
+            }
+            else
+            {
+                if (j % 2 == 0)
+                {
+                    cout << "0 ";
+                }
+                else
+                {
+                    cout << "1 ";
+                }
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -247,6 +287,7 @@ int main()
     // halfPyrUsinNumber();
     // froidsTriangle();
     // butterflyPatter();
-    invertedPattern();
+    // invertedPattern();
+    _01Pattern();
     return 0;
 }
