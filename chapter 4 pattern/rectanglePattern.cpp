@@ -287,6 +287,35 @@ void rhombusPattern()
 
     
 }
+void numberPattern()
+{
+    //          
+    //     1 (4 spaces)
+    //    1 2
+    //   1 2 3
+    //  1 2 3 4
+    // 1 2 3 4 5
+    
+    int n;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (j<=n-i)
+            {
+                cout<<" ";
+            }else{
+                cout<<j+i-n<<" ";
+            }
+            
+        }
+        cout<<endl;
+        
+    }
+    
+    
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -302,6 +331,7 @@ int main()
     // butterflyPatter();
     // invertedPattern();
     // _01Pattern();
-    rhombusPattern();
+    // rhombusPattern();
+    numberPattern();
     return 0;
 }
