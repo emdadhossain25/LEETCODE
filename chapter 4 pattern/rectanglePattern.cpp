@@ -366,27 +366,33 @@ void starPattern()
 
     int n;
     cin >> n;
-    for(int row=1;row<=n;row++){
-        int col;
-        for ( col = 1; col <= n-row; col++)
+    for (int row = 1; row <= n; row++)
+    {
+
+        for (int col = 1; col <= n - row; col++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        for(;col<=n+row-1;col++){
-            cout<<"*";
+        //here 2*row-1 ensures odd stars
+        for (int col = 1; col <= 2 * row - 1; col++)
+        {
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
-    for(int row=n;row>=1;row--){
-        int col;
-        for ( col = 1; col <= n-row; col++)
+    for (int row = n; row >= 1; row--)
+    {
+
+        for (int col = 1; col <= n - row; col++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        for(;col<=n+row-1;col++){
-            cout<<"*";
+        //here 2*row-1 ensures odd stars
+        for (int col = 1; col <= 2 * row - 1; col++)
+        {
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 int main()
