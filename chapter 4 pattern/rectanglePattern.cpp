@@ -247,7 +247,7 @@ void _01Pattern()
     {
         for (int j = 1; j <= i; j++)
         {
-            if ((i + j )% 2 == 0)
+            if ((i + j) % 2 == 0)
             {
                 cout << "1 ";
             }
@@ -263,58 +263,90 @@ void _01Pattern()
 
 void rhombusPattern()
 {
-    //          
+    //
     //     * * * * * 1 (5 spaces 5 stars)
     //    * * * * *  2
     //   * * * * *   3
     //  * * * * *    4
     // * * * * *     5
-    
+
     int n;
     cin >> n;
-    for(int i =1; i<=n;i++){
+    for (int i = 1; i <= n; i++)
+    {
         // boundary for columns is dynamic for each row
-        for (int j = 1; j <= (2*n)-i; j++)
+        for (int j = 1; j <= (2 * n) - i; j++)
         {
-            if(j<=n-i){
-                cout<<" ";
-            }else{
-                cout<<"* ";
+            if (j <= n - i)
+            {
+                cout << " ";
+            }
+            else
+            {
+                cout << "* ";
             }
         }
-        cout<<endl;
+        cout << endl;
     }
-
-    
 }
 void numberPattern()
 {
-    //          
+    //
     //     1 (4 spaces)
     //    1 2
     //   1 2 3
     //  1 2 3 4
     // 1 2 3 4 5
-    
+
     int n;
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
         for (int j = 1; j <= n; j++)
         {
-            if (j<=n-i)
+            if (j <= n - i)
             {
-                cout<<" ";
-            }else{
-                cout<<j+i-n<<" ";
+                cout << " ";
             }
-            
+            else
+            {
+                cout << j + i - n << " ";
+            }
         }
-        cout<<endl;
-        
+        cout << endl;
     }
-    
-    
+}
+void pallindromicPattern()
+{
+    //        1
+    //      2 1 2
+    //    3 2 1 2 3
+    //  4 3 2 1 2 3 4
+    // 5 4 3 2 1 2 3 4 5
+
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n + i - 1; j++)
+        {
+            if (j <= n - i)
+            {
+                cout << " ";
+            }
+            else
+            {
+                if(j-n+1>0){
+                    cout<<j-n+1;
+                }else{
+                    cout<<n-j+1;
+                }
+               
+            }
+        }
+        cout << endl;
+    }
 }
 int main()
 {
@@ -332,6 +364,7 @@ int main()
     // invertedPattern();
     // _01Pattern();
     // rhombusPattern();
-    numberPattern();
+    // numberPattern();
+    pallindromicPattern();
     return 0;
 }
