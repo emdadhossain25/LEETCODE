@@ -261,6 +261,31 @@ void _01Pattern()
     }
 }
 
+void rhombusPattern()
+{
+    //          
+    //     * * * * * 1 (5 spaces 5 stars)
+    //    * * * * *  2
+    //   * * * * *   3
+    //  * * * * *    4
+    // * * * * *     5
+    
+    int n;
+    cin >> n;
+    for(int i =1; i<=n;i++){
+        for (int j = 1; j <= (2*n+1)-i; j++)
+        {
+            if(j<=(n+1)-i){
+                cout<<" ";
+            }else{
+                cout<<"* ";
+            }
+        }
+        cout<<endl;
+    }
+
+    
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -275,6 +300,7 @@ int main()
     // froidsTriangle();
     // butterflyPatter();
     // invertedPattern();
-    _01Pattern();
+    // _01Pattern();
+    rhombusPattern();
     return 0;
 }
