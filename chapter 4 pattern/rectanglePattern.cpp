@@ -353,6 +353,42 @@ void pallindromicPattern()
         cout << endl;
     }
 }
+void starPattern()
+{
+    //        *
+    //      * * *
+    //    * * * * *
+    //  * * * * * * *
+    //  * * * * * * *
+    //    * * * * *
+    //      * * *
+    //        *
+
+    int n;
+    cin >> n;
+    for(int row=1;row<=n;row++){
+        int col;
+        for ( col = 1; col <= n-row; col++)
+        {
+            cout<<" ";
+        }
+        for(;col<=n+row-1;col++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    for(int row=n;row>=1;row--){
+        int col;
+        for ( col = 1; col <= n-row; col++)
+        {
+            cout<<" ";
+        }
+        for(;col<=n+row-1;col++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -370,6 +406,7 @@ int main()
     // _01Pattern();
     // rhombusPattern();
     // numberPattern();
-    pallindromicPattern();
+    // pallindromicPattern();
+    starPattern();
     return 0;
 }
