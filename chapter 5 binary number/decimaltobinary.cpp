@@ -38,6 +38,31 @@ void reverseNumber()
     }
     cout << reverse << endl;
 }
+
+void armstrongNumber()
+{
+    // cube all digits add the sum will the original number
+
+    int n;
+    cin >> n;
+    int original = n;
+    int sum = 0;
+    while (n > 0)
+    {
+        int lastDigit = n % 10;
+        sum = sum + pow(lastDigit, 3);
+        n /= 10;
+    }
+    cout << sum << endl;
+    if (original == sum)
+    {
+        cout << "armstrong" << endl;
+    }
+    else
+    {
+        cout << "not armstrong" << endl;
+    }
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -45,7 +70,8 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
     // checkPrime();
-    reverseNumber();
+    // reverseNumber();
+    armstrongNumber();
 
     return 0;
 }
