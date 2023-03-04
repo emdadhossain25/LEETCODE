@@ -53,14 +53,35 @@ int factorial(int n)
     {
         product *= i;
     }
-    return product ;
+    return product;
 }
 
-int nCr(int n,int r){
+int nCr(int n, int r)
+{
     // binary coefficient
     // nCr= n!/(n-r)!*r!
-    
-    return factorial(n)/(factorial(n-r)*factorial(r));
+
+    return factorial(n) / (factorial(n - r) * factorial(r));
+}
+
+void pascalTriangle(int row)
+{
+    // <--rows starting from 0 index-->
+    //                   // 1
+    //   ^               // 1 1
+    //  col 0 to row     // 1 2 1
+    //   v               // 1 3 3 1
+    //                   // 1 4 6 4 1
+    // elements row C col (binary coEfficien nCr)
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << nCr(i, j) << " ";
+        }
+        cout << endl;
+    }
 }
 int main()
 {
@@ -68,8 +89,8 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int n,r;
-    cin >> n>>r;
+    int n;
+    cin >> n;
 
     // fibonacci(n);
 
@@ -85,7 +106,8 @@ int main()
     // factorialSum(n2);
 
     // cout<<factorial(n)<<endl;
-    cout<<nCr(n,r)<<endl;
+    // cout << nCr(n, r) << endl;
+    pascalTriangle(n);
 
     return 0;
 }
