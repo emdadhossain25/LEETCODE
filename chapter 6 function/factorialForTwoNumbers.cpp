@@ -55,14 +55,21 @@ int factorial(int n)
     }
     return product ;
 }
+
+int nCr(int n,int r){
+    // binary coefficient
+    // nCr= n!/(n-r)!*r!
+    
+    return factorial(n)/(factorial(n-r)*factorial(r));
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int n;
-    cin >> n;
+    int n,r;
+    cin >> n>>r;
 
     // fibonacci(n);
 
@@ -77,9 +84,8 @@ int main()
     // factorialSum(n1);
     // factorialSum(n2);
 
-    cout<<factorial(n)<<endl;
-
-
+    // cout<<factorial(n)<<endl;
+    cout<<nCr(n,r)<<endl;
 
     return 0;
 }
