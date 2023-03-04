@@ -13,30 +13,19 @@ void factorialSum(int n)
     }
     cout << factorial << endl;
 }
-void primeNumbersBetweenTwoinputs(int startNumber, int endNumber)
+
+bool isPrime(int n)
 {
-
-    while (endNumber >= startNumber)
+    bool flag = true;
+   
+    for (int i = 2; i <= sqrt(n); i++)
     {
-        bool flag = 0; // to check full iteration
-
-        for (int i = 2; i < endNumber; i++)
+        if (n % i == 0)
         {
-            if (endNumber % i == 0)
-            {
-                flag = 1;
-                break;
-            }
+            flag = false;
         }
-        // if full iteration from 2 to endNumber-1 done
-        // without dividing then its a prime
-        if (flag == 0)
-        {
-            cout << endNumber << endl;
-        }
-
-        endNumber--;
     }
+    return flag;
 }
 int main()
 {
@@ -44,10 +33,20 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int n1, n2;
-    cin >> n1 >> n2;
+
+    int a, b;
+    cin >> a >> b;
+
+    for (int i = min(a, b); i <= max(a, b); i++)
+    {
+        if (isPrime(i))
+        {
+            // cout << i << endl;
+        }
+    }
+
     // factorialSum(n1);
     // factorialSum(n2);
-    primeNumbersBetweenTwoinputs(min(n1, n2), max(n1, n2));
+
     return 0;
 }
