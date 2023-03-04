@@ -7,7 +7,7 @@ int32_t sumOfNaturalNUmbers(int n)
     return n * (n + 1) / 2;
 }
 
-bool pythogorianTriplet(int x, int y, int z)
+void pythogorianTriplet(int x, int y, int z)
 {
     int a = max(x, max(y, z));
     int b, c;
@@ -27,7 +27,14 @@ bool pythogorianTriplet(int x, int y, int z)
         c = y;
     }
 
-    return (pow(a, 2) == (pow(b, 2) + pow(c, 2)));
+    if (pow(a, 2) == (pow(b, 2) + pow(c, 2)))
+    {
+        cout << "Pythogorean Triplet";
+    }
+    else
+    {
+        cout << "Not Pythogorean Triplet";
+    }
 }
 
 int32_t main()
@@ -36,8 +43,8 @@ int32_t main()
     // cin >> n;
     // cout << sumOfNaturalNUmbers(n) << endl;
 
-    int x,y,z;
-    cin>>x>>y>>z;
-    cout<<pythogorianTriplet(x,y,z)<<endl;
+    int x, y, z;
+    cin >> x >> y >> z;
+    pythogorianTriplet(x, y, z);
     return 0;
 }
