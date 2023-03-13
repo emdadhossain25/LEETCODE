@@ -12,6 +12,7 @@
 // 2. File scope/ module scope 
   // accessible anywhere in the current module/file
 // 3. Function Scope
+// 4. block scope
 
 // Error we never made a variable named answer
 // console.log(answer);
@@ -30,6 +31,12 @@ function sayHello() {
     console.log(name);
     
   }
+
+  //nested function
+  const getLunch = function(){
+    return name+" here is your lunch"
+  }
+ console.log(getLunch());
 }
 
 
@@ -37,3 +44,5 @@ function sayHello() {
 let name ='Emdad';
  
 sayHello()
+// Cannot access 'name' before initialization
+// let name ='Emdad';
