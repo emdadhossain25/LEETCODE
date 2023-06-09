@@ -7,19 +7,16 @@ typedef long long ll;
 #define ss second
 #define REP(i, a, b) for (int i = a; i <= b; ++i)
 
-double average(vector<int> &inputArray)
+double average(vector<int>& inputArray)
 {
-  stable_sort(inputArray.begin(), inputArray.end());
-  int totalElements = 0, totalAverageElements = 0;
-  // iterate over vector
-  for (auto &p : inputArray)
-  {
-    totalElements += p;
-  }
-  int size = inputArray.size();
-  totalAverageElements = totalElements - (inputArray.at(0) + inputArray.at(size - 1));
-  double answer = static_cast<double>(totalAverageElements) / (size - 2);
-  return answer;
+ int n = inputArray.size();
+ sort(inputArray.begin(),inputArray.end());
+ int sum = accumulate(inputArray.begin(),inputArray.end(),0);
+ sum-=inputArray[0];
+ sum-=inputArray[n-1];
+ double result = (double) sum/(n-2);
+ return result;
+
 }
 
 int main()
