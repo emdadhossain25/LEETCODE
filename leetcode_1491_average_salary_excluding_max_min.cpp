@@ -6,6 +6,22 @@ typedef long long ll;
 #define ff first
 #define ss second
 #define REP(i, a, b) for (int i = a; i <= b; ++i)
+
+double average(vector<int> &inputArray)
+{
+  stable_sort(inputArray.begin(), inputArray.end());
+  int totalElements = 0, totalAverageElements = 0;
+  // iterate over vector
+  for (auto &p : inputArray)
+  {
+    totalElements += p;
+  }
+  int size = inputArray.size();
+  totalAverageElements = totalElements - (inputArray.at(0) + inputArray.at(size - 1));
+  double answer = static_cast<double>(totalAverageElements) / (size - 2);
+  return answer;
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -28,11 +44,6 @@ int main()
     ++i;
   }
 
-  // iterate over vector
-  for (auto &p : inputArray)
-  {
-    cout << p << endl;
-  }
-
+  cout << average(inputArray) << endl;
   return 0;
 }
