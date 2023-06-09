@@ -15,7 +15,7 @@ int countOdds(int low, int high){
     // check if the number is odd
     if (i & 1)
     {
-      // if so add 1;
+      // if so add 1 to answer (counter of odds);
       ans+=1;
     }
   }
