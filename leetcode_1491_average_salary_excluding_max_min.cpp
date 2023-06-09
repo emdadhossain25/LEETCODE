@@ -9,12 +9,24 @@ typedef long long ll;
 
 double average(vector<int>& inputArray)
 {
+  // size of vector
  int n = inputArray.size();
+ // sort 
  sort(inputArray.begin(),inputArray.end());
+ 
+ // sum of elements
  int sum = accumulate(inputArray.begin(),inputArray.end(),0);
+
+ // substract first element
  sum-=inputArray[0];
+
+ // substract last element
  sum-=inputArray[n-1];
+
+ // average of remaining sum
  double result = (double) sum/(n-2);
+
+ 
  return result;
 
 }
