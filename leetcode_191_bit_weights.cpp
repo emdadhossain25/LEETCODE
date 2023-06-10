@@ -10,14 +10,21 @@ typedef long long ll;
 int hammingWeight(uint32_t n)
 {
 
-  int count = 0;
- while(n){
-  if(n&1>0){
-    count++;
-  }
-  n>>=1;
- }
+  // approach 1. we can use built in funciton
+  // return __builtin_popcount(n);
 
+  // approach 2. we can check each bit by
+  // increase count by 1 if the bit is set
+
+  int count = 0;
+  while (n)
+  {
+    if (n & 1 > 0) count++;
+
+    // shift 1 bit to the right 
+    // it is same as n/=2;(n=n/2)
+    n >>= 1;
+  }
   return count;
 }
 
