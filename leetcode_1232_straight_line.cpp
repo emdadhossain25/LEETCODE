@@ -47,7 +47,7 @@ int main()
       {3, 4},
       {4, 5},
       {5, 6},
-      {7, 7}};
+      {6, 7}};
 
   cout << checkStraightLine(coordinates) << endl;
   return 0;
