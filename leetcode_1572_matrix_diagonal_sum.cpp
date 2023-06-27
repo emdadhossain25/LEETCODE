@@ -39,7 +39,7 @@ int diagonalSum(vector<vector<int>> &mat)
   }
   else
   {
-    ans = mat[n-1][n-1];
+    ans = mat[n - 1][n - 1];
   }
 
   return ans;
