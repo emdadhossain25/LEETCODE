@@ -9,9 +9,21 @@ typedef long long ll;
 
 bool isAlienSorted(vector<string> &words, string order)
 {
-  bool ans=false;
+  int m[26];
+  // map new order
+  for (int i = 0; i < 26; i++)
+    m[order[i] - 'a'] = i;
 
-  return ans;
+  // replace with the new order
+  for (auto &w : words)
+  {
+    for (auto &c : w)
+    {
+      c = m[c - 'a'] + 'a';
+    }
+  }
+  // check is sorted
+  return is_sorted(words.begin(), words.end());
 }
 int main()
 {
@@ -22,6 +34,6 @@ int main()
 
   vector<string> words = {"word", "world", "row"};
   string order = "worldabcefghijkmnpqstuvxyz";
-
+  cout << isAlienSorted(words, order) << endl;
   return 0;
 }
