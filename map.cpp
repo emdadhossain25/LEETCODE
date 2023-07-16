@@ -8,7 +8,9 @@ cin.tie(0);
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
 #endif
-  map<string,int> m;
+// can be structured uses binary tree with O(logn)
+// can be unordered_map uses hashing to access with O(1) ;
+  map<string,int> m; 
   m["a"]=1;
   m["b"]=2;
   cout<<m["check"]<<'\n'; // returns 0
